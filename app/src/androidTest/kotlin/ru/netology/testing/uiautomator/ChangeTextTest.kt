@@ -117,7 +117,7 @@ class ChangeTextTest {
 
         val inputField = device.findObject(By.res(packageName, "userInput"))
         val changeButton = device.findObject(By.res(packageName, "buttonChange"))
-        val resultText = device.wait(Until.findObject(By.res(packageName, "textToBeChanged")), TIMEOUT)
+        val resultText = device.findObject(By.res(packageName, "textToBeChanged"))
         val initialText = resultText.text
         inputField.text = "   "
         changeButton.click()
